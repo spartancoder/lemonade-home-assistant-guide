@@ -1,0 +1,31 @@
+# Site information
+title: "Lemonade Home Assistant Guide"
+description: "Complete guide to setting up a local voice assistant with Lemonade Server"
+baseurl: ""  # Empty for root deployment, adjust if using subdirectory
+url: ""  # Will be populated by GitHub Pages, leave empty for now
+
+# Theme (remote theme for GitHub Pages)
+remote_theme: just-the-docs/just-the-docs@v0.12.2
+
+# Theme features
+search_enabled: true
+search:
+  heading_level: 2  # Split pages into H2 sections
+  previews: 3  # Max 3 previews per result
+
+# Auto dark mode (follows system preference)
+color_scheme: nil  # nil = auto, "light" = light only, "dark" = dark only
+
+# Navigation
+nav_enabled: true
+
+# Heading anchors (for deep linking)
+heading_anchors: true
+
+# Footer
+footer_content: "Copyright &copy; 2026. Distributed by MIT license."
+
+# Aux links (optional - add social links later if needed)
+aux_links:
+  "View on GitHub":
+    - "//github.com/username/repo"  # Replace with actual repo URL
