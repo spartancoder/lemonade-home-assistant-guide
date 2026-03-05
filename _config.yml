@@ -28,4 +28,4 @@ footer_content: "Copyright &copy; 2026. Distributed by MIT license."
 # Aux links (optional - add social links later if needed)
 aux_links:
   "View on GitHub":
-    - "//github.com/username/repo"  # Replace with actual repo URL
+    - "//github.com/spartancoder/lemonade-home-assistant-guide"
