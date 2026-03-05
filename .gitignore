@@ -1,0 +1,14 @@
+.devcontainer
+opencode.json
+.planning/
+
+# Jekyll build output
+_site/
+.sass-cache/
+
+# Jekyll cache files
+.jekyll-cache/
+.jekyll-metadata
+
+# Dependency lock file (GitHub Pages generates its own)
+Gemfile.lock
