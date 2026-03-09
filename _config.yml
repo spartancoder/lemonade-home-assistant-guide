@@ -5,7 +5,7 @@ baseurl: ""  # Empty for root deployment, adjust if using subdirectory
 url: ""  # Will be populated by GitHub Pages, leave empty for now
 
 # Theme (remote theme for GitHub Pages)
-remote_theme: just-the-docs/just-the-docs@v0.12.2
+remote_theme: just-the-docs/just-the-docs@v0.12.0
 
 # Theme features
 search_enabled: true
