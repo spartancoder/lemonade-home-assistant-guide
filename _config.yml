@@ -13,8 +13,10 @@ search:
   heading_level: 2  # Split pages into H2 sections
   previews: 3  # Max 3 previews per result
 
-# Auto dark mode (follows system preference)
-color_scheme: nil  # nil = auto, "light" = light only, "dark" = dark only
+# Color scheme
+# Default is "light". Auto dark mode switching is handled by custom JavaScript
+# in assets/js/dark-mode.js which detects system preference and applies theme
+color_scheme: light
 
 # Navigation
 nav_enabled: true
