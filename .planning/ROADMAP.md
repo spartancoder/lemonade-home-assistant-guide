@@ -56,11 +56,12 @@
 6. User can follow cross-links between related tutorial sections
 7. Content is properly structured with H1, H2, H3 heading hierarchy
 
-**Plans**: TBD
+**Plans**: 4 plans in 1 wave
 
----
-
-### Phase 3: Tutorial Documentation
+- [ ] 02-01-PLAN.md — Enable copy code button and configure footer
+- [ ] 02-02-PLAN.md — Create Introduction and Installation navigation structure
+- [ ] 02-03-PLAN.md — Create Speech-to-Text and Text-to-Speech sections
+- [ ] 02-04-PLAN.md — Create Conversational, Usage, and References sections
 
 **Goal**: All tutorial content is written with working code examples for all models
 

@@ -24,6 +24,9 @@ nav_enabled: true
 # Heading anchors (for deep linking)
 heading_anchors: true
 
+# Enable copy button for code blocks (just-the-docs v0.4+)
+enable_copy_code_button: true
+
 # Footer
 footer_content: "Copyright &copy; 2026. Distributed by MIT license."
 
