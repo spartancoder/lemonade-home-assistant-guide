@@ -27,9 +27,6 @@ heading_anchors: true
 # Enable copy button for code blocks (just-the-docs v0.4+)
 enable_copy_code_button: true
 
-# Footer
-footer_content: "Copyright &copy; 2026. Distributed by MIT license."
-
 # Aux links (optional - add social links later if needed)
 aux_links:
   "View on GitHub":
