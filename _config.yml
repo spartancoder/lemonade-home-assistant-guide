@@ -7,6 +7,10 @@ url: ""  # Will be populated by GitHub Pages, leave empty for now
 # Theme (remote theme for GitHub Pages)
 remote_theme: just-the-docs/just-the-docs@v0.12.0
 
+# Plugins required for remote theme
+plugins:
+  - jekyll-remote-theme
+
 # Theme features
 search_enabled: true
 search:
