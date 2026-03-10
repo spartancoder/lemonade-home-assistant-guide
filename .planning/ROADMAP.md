@@ -6,7 +6,7 @@
 
 ## Phases
 
-- [ ] **Phase 1: Site Infrastructure** - GitHub Pages hosting with Jekyll, responsive design, dark mode
+- [x] **Phase 1: Site Infrastructure** - GitHub Pages hosting with Jekyll, responsive design, dark mode
 - [ ] **Phase 2: Content Architecture** - Navigation structure, code highlighting, TOC, cross-links
 - [ ] **Phase 3: Tutorial Documentation** - All 14 tutorial sections with code examples and model guides
 - [ ] **Phase 4: Home Assistant Integration** - Complete HA configuration with voice assistant pipeline
@@ -29,11 +29,13 @@
 4. Site uses Jekyll 3.10.0 with just-the-docs theme and builds successfully
 5. Large files are distributed via GitHub Releases (Git LFS not supported on GitHub Pages)
 
-**Plans**: 2 plans
+**Plans**: 4 plans (2 original + 2 gap closure)
 
 **Plan list:**
-- [ ] 01-01-PLAN.md — Set up Jekyll infrastructure with just-the-docs theme
-- [ ] 01-02-PLAN.md — Deploy to GitHub Pages and configure large file distribution
+- [x] 01-01-PLAN.md — Set up Jekyll infrastructure with just-the-docs theme
+- [x] 01-02-PLAN.md — Deploy to GitHub Pages and configure large file distribution
+- [x] 01-03-PLAN.md — Verify GitHub Pages deployment and site accessibility (gap closure)
+- [x] 01-04-PLAN.md — Verify GitHub release v1.0.0 and large file distribution (gap closure)
 
 ---
 
@@ -136,7 +138,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Site Infrastructure | 0/2 | Planned | - |
+| 1. Site Infrastructure | 4/4 | Complete | 2026-03-10 |
 | 2. Content Architecture | 0/0 | Not started | - |
 | 3. Tutorial Documentation | 0/0 | Not started | - |
 | 4. Home Assistant Integration | 0/0 | Not started | - |
