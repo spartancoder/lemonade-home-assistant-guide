@@ -1,150 +1,97 @@
 # Roadmap: Lemonade Home Assistant Guide
 
-**Created:** 2026-03-04
-**Granularity:** Standard
-**Phases:** 5
+## Overview
+
+A comprehensive GitHub Pages tutorial that teaches users how to set up a local, privacy-focused voice assistant using Lemonade Server integrated with Home Assistant. The project progresses from infrastructure setup through content architecture to complete tutorial documentation.
 
 ## Phases
 
-- [x] **Phase 1: Site Infrastructure** - GitHub Pages hosting with Jekyll, responsive design, dark mode
-- [ ] **Phase 2: Content Architecture** - Navigation structure, code highlighting, TOC, cross-links
-- [ ] **Phase 3: Tutorial Documentation** - All 14 tutorial sections with code examples and model guides
-- [ ] **Phase 4: Home Assistant Integration** - Complete HA configuration with voice assistant pipeline
-- [ ] **Phase 5: Testing & Deployment** - Validation, link checking, deployment to GitHub Pages
+- [x] **Phase 1: Site Infrastructure** - Jekyll + GitHub Pages + just-the-docs theme
+- [x] **Phase 2: Content Architecture** - Navigation, code presentation, cross-linking systems
+- [ ] **Phase 3: Tutorial Documentation** - All tutorial content pages with code examples
+- [ ] **Phase 4: Final Polish** - Testing, refinement, and deployment validation
 
 ## Phase Details
 
 ### Phase 1: Site Infrastructure
-
-**Goal**: GitHub Pages site is deployed and accessible on all devices with modern features
-
-**Depends on**: Nothing
-
-**Requirements**: INFRA-01, INFRA-06, INFRA-10, INFRA-12
-
+**Goal**: Configured GitHub Pages site with Jekyll 3.10.0, just-the-docs theme, responsive design, dark mode support, and Git LFS pattern documentation.
+**Depends on**: Nothing (first phase)
+**Requirements**: [INFRA-01, INFRA-02, INFRA-03, INFRA-04, INFRA-05, INFRA-06, INFRA-10, INFRA-12]
 **Success Criteria** (what must be TRUE):
-1. User can access the GitHub Pages site at the published URL
-2. User can view site on desktop, mobile, and tablet with responsive layout
-3. Site follows system preference for light/dark mode (auto mode)
-4. Site uses Jekyll 3.10.0 with just-the-docs theme and builds successfully
-5. Large files are distributed via GitHub Releases (Git LFS not supported on GitHub Pages)
+  1. User can access the site via GitHub Pages URL
+  2. Site renders responsively on desktop, mobile, and tablet
+  3. Dark mode follows user's system preference
+  4. Large files can be distributed via GitHub Releases
+**Plans**: 4 plans (complete)
 
-**Plans**: 4 plans (2 original + 2 gap closure)
-
-**Plan list:**
-- [x] 01-01-PLAN.md — Set up Jekyll infrastructure with just-the-docs theme
-- [x] 01-02-PLAN.md — Deploy to GitHub Pages and configure large file distribution
-- [x] 01-03-PLAN.md — Verify GitHub Pages deployment and site accessibility (gap closure)
-- [x] 01-04-PLAN.md — Verify GitHub release v1.0.0 and large file distribution (gap closure)
-
----
+Plans:
+- [x] 01-01: Jekyll infrastructure setup with just-the-docs theme
+- [x] 01-02: GitHub Pages deployment configuration
+- [x] 01-03: GitHub Pages deployment verification
+- [x] 01-04: GitHub release verification
 
 ### Phase 2: Content Architecture
-
-**Goal**: Site has complete navigation, code readability, and content organization systems
-
+**Goal**: Site has complete navigation structure, code readability features, copy functionality, and content organization systems ready for tutorial content.
 **Depends on**: Phase 1
-
-**Requirements**: INFRA-02, INFRA-03, INFRA-04, INFRA-05, INFRA-07, INFRA-08, INFRA-09, CONT-01, CONT-02
-
+**Requirements**: [ARCH-01, ARCH-02, ARCH-03, ARCH-04, ARCH-05, ARCH-06, ARCH-07]
 **Success Criteria** (what must be TRUE):
-1. User can navigate to any tutorial section via sidebar or top menu
-2. User sees code blocks with proper syntax highlighting for all languages
-3. User can copy any code example with a single click (click-to-copy)
-4. User sees table of contents for each tutorial section with clickable anchors
-5. User can see version and date information on all pages
-6. User can follow cross-links between related tutorial sections
-7. Content is properly structured with H1, H2, H3 heading hierarchy
+  1. User can navigate via hierarchical sidebar (Introduction, Installation, STT, TTS, Conversational, Usage, References)
+  2. Code blocks have copy button functionality
+  3. Cross-links work between related sections
+  4. Per-page last updated dates display correctly
+**Plans**: 4 plans (complete)
 
-**Plans**: 4 plans in 1 wave
+Plans:
+- [x] 02-01: Copy code button and footer
+- [x] 02-02: Introduction and Installation navigation
+- [x] 02-03: STT and TTS sections
+- [x] 02-04: Conversational, Usage, and References sections
 
-- [ ] 02-01-PLAN.md — Enable copy code button and configure footer
-- [ ] 02-02-PLAN.md — Create Introduction and Installation navigation structure
-- [ ] 02-03-PLAN.md — Create Speech-to-Text and Text-to-Speech sections
-- [ ] 02-04-PLAN.md — Create Conversational, Usage, and References sections
-
-**Goal**: All tutorial content is written with working code examples for all models
-
+### Phase 3: Tutorial Documentation
+**Goal**: Complete tutorial content for all 7 major sections with beginner-friendly explanations, working code examples, and configuration snippets.
 **Depends on**: Phase 2
-
-**Requirements**: CONT-03, DOC-01, DOC-02, DOC-03, DOC-04, DOC-05, DOC-06, DOC-07, DOC-08, DOC-09, DOC-10, DOC-14, MODEL-01, MODEL-02, MODEL-03, MODEL-04, MODEL-05, MODEL-06, MODEL-07, INFRA-11
-
+**Requirements**: [TUT-01, TUT-02, TUT-03, TUT-04, TUT-05, TUT-06, TUT-07, TUT-08, TUT-09, TUT-10, TUT-11, TUT-12, TUT-13, TUT-14]
 **Success Criteria** (what must be TRUE):
-1. User can read complete introduction covering Lemonade Server, architecture, hardware requirements, and tutorial roadmap
-2. User can follow prerequisites section with Linux basics, Home Assistant basics, hardware requirements, and software dependencies
-3. User can install Lemonade Server on Debian Linux with system update, dependencies, systemd service, and verification steps
-4. User sees Windows placeholder note about future support
-5. User can set up Whisper-Large-v3-Turbo (STT) model with working configuration
-6. User can set up kokoro-v1 (TTS) model with working configuration
-7. User can set up Qwen3-4B-Instruct-2507-GGUF (LLM primary) model with working configuration
-8. User can set up gpt-oss-20b-mxfp4-GGUF (LLM secondary) model with working configuration
-9. User can set up nomic-embed-text-v2-moe-GGUF (embedding) model with working configuration
-10. User can configure AMD Ryzen AI NPU acceleration for supported models
-11. User can access all sources and links in references section (Lemonade Server, Home Assistant, models, AMD NPU, community resources)
-12. User can download configuration files and scripts from downloadable resources section
-13. All code examples use version-pinned commands and configuration (e.g., homeassistant==2024.12.0 not "latest")
+  1. User can read Introduction explaining the project and its value
+  2. User can install Lemonade Server on Debian Linux following step-by-step instructions
+  3. User can configure Whisper STT with Home Assistant
+  4. User can configure Kokoro TTS with Home Assistant
+  5. User can configure LLM (GPU or NPU path) with Home Assistant
+  6. User can configure embedding model for conversation context
+  7. User can set up complete voice assistant pipeline in Home Assistant
+  8. User can test voice assistant with usage examples
+  9. User can access references for all tools and resources
+**Plans**: 6 plans in 2 waves
 
-**Plans**: TBD
+Plans:
+- [ ] 03-01: Introduction and Prerequisites pages (TUT-01, TUT-02)
+- [ ] 03-02: Installation section - overview and Debian/RHEL guides (TUT-03, TUT-04)
+- [ ] 03-03: Speech-to-Text section - Whisper setup and HA integration (TUT-05, TUT-06)
+- [ ] 03-04: Text-to-Speech section - Kokoro setup and HA integration (TUT-07, TUT-08)
+- [ ] 03-05: Conversational section - LLM (GPU/NPU) and Embedding setup (TUT-09, TUT-10, TUT-11)
+- [ ] 03-06: Conversational HA and Usage Examples (TUT-12, TUT-13, TUT-14)
 
----
-
-### Phase 4: Home Assistant Integration
-
-**Goal**: Complete Home Assistant voice assistant pipeline configuration with all components
-
+### Phase 4: Final Polish
+**Goal**: Site is fully tested, refined, and ready for public release with all content verified working.
 **Depends on**: Phase 3
-
-**Requirements**: DOC-11, DOC-12, DOC-13, HA-01, HA-02, HA-03, HA-04, HA-05, HA-06, HA-07, HA-08
-
+**Requirements**: [POLISH-01, POLISH-02, POLISH-03]
 **Success Criteria** (what must be TRUE):
-1. User can install Home Assistant 2024.12+ and configure it for voice assistant
-2. User can install HACS plugin via the documented procedure
-3. User can configure STT endpoint with whisper.cpp integration
-4. User can configure LLM endpoint with llama.cpp integration
-5. User can configure TTS endpoint with kokoro integration
-6. User can configure embedding endpoint with nomic-embed-text integration
-7. User can set up complete voice assistant pipeline (STT → LLM → TTS → conversation agent)
-8. User can configure wake word for voice assistant activation
-9. User can test the complete voice assistant pipeline end-to-end
-10. User can execute basic voice commands through the assistant
-11. User can set up automations using the voice assistant
-12. User can configure custom intents for specific interactions
-13. User can integrate voice assistant with other Home Assistant components
-
+  1. All code examples tested and verified working
+  2. All internal and external links verified
+  3. Site accessible and functional on GitHub Pages
 **Plans**: TBD
 
----
-
-### Phase 5: Testing & Deployment
-
-**Goal**: Site is validated, tested, and successfully deployed to GitHub Pages
-
-**Depends on**: Phase 4
-
-**Requirements**: TEST-01, TEST-02, TEST-03, TEST-04, TEST-05
-
-**Success Criteria** (what must be TRUE):
-1. User can follow the complete tutorial in a fresh Debian environment and achieve working voice assistant
-2. User can access all external links (no broken links in the tutorial)
-3. Site builds successfully with Jekyll locally with no errors
-4. Site deploys successfully to GitHub Pages and is accessible via published URL
-5. User can navigate to all tutorial sections and verify all navigation links work
-6. Site loads quickly and performs well across devices
-
-**Plans**: TBD
-
----
+Plans:
+- [ ] 04-01: [To be planned]
 
 ## Progress
 
+**Execution Order:**
+Phases execute in numeric order: 1 → 2 → 3 → 4
+
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Site Infrastructure | 4/4 | Complete | 2026-03-10 |
-| 2. Content Architecture | 0/0 | Not started | - |
-| 3. Tutorial Documentation | 0/0 | Not started | - |
-| 4. Home Assistant Integration | 0/0 | Not started | - |
-| 5. Testing & Deployment | 0/0 | Not started | - |
-
----
-
-*Roadmap created: 2026-03-04*
+| 1. Site Infrastructure | 4/4 | Complete | 2026-03-04 |
+| 2. Content Architecture | 4/4 | Complete | 2026-03-09 |
+| 3. Tutorial Documentation | 0/6 | Planned | - |
+| 4. Final Polish | 0/TBD | Not started | - |
