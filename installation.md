@@ -3,21 +3,46 @@ layout: default
 title: Installation
 nav_order: 3
 has_children: true
-description: "Installation guides for Lemonade Server"
-last_modified_date: 2026-03-09
+description: "Install Lemonade Server on your platform"
+last_modified_date: 2026-03-11
 ---
 
 # Installation
 
-Choose your platform to get started with Lemonade Server installation.
+Get Lemonade Server running on your system. This section covers installation for supported platforms with step-by-step instructions.
 
-## Platform Options
+## Choose Your Platform
 
-- **Linux** - Recommended for production use
-  - Debian Based (Ubuntu, Debian)
-  - RHEL Based (Fedora, CentOS, RHEL)
-- **Windows** - Coming soon
+| Platform | Status | Recommended For |
+|----------|--------|-----------------|
+| [Linux](/linux) | ✅ Supported | Production use, servers, development |
+| [Windows](/windows-installation) | 🚧 Coming Soon | Desktop use (use WSL alternative) |
+
+## Prerequisites Check
+
+Before installing, ensure you have:
+
+- **Hardware**: 16GB RAM minimum, 32GB+ recommended for larger models
+- **Storage**: 20GB+ free disk space for models and dependencies
+- **Python**: Python 3.10 or higher
+
+{: .note }
+> See [Prerequisites](/prerequisites) for complete hardware and software requirements.
+
+## What You'll Install
+
+Lemonade Server includes:
+
+- **Core Server** - HTTP API for model inference
+- **Model Support** - STT, LLM, TTS, and embedding models
+- **Home Assistant Integration** - Wyoming protocol support for voice assistant
+- **Systemd Service** - Auto-start on boot (Linux)
 
 ## Next Steps
 
-Select your platform from the sidebar to begin installation.
+1. **Linux Users**: Go to [Linux](/linux) and select your distribution
+2. **Windows Users**: See [Windows Installation](/windows-installation) for WSL alternative
+
+---
+
+*Installation typically takes 10-15 minutes depending on your internet connection.*
