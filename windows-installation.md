@@ -4,7 +4,7 @@ title: Windows
 parent: Installation
 nav_order: 3
 description: "Windows installation guide for Lemonade Server (coming soon)"
-last_modified_date: 2026-03-09
+last_modified_date: 2026-03-11
 ---
 
 # Windows Installation
