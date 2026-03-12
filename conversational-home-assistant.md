@@ -57,12 +57,14 @@ Click **Create** to save your pipeline.
 For hands-free activation, install openWake:
 
 **Via Home Assistant Terminal:**
+
 ```bash
 # Install openWake addon
 ha addons install openwake
 ```
 
 **Via HACS:**
+
 1. Go to **HACS > Integrations**
 2. Search for "OpenWake"
 3. Click **Download**
@@ -75,6 +77,7 @@ After installation, configure openWake in **Settings > Voice assistants** and se
 Test your voice assistant using Developer Tools:
 
 **Via Services:**
+
 ```yaml
 # Developer Tools > Services
 service: conversation.process
@@ -83,17 +86,18 @@ data:
 ```
 
 **Via Voice:**
+
 1. Open the Home Assistant sidebar
 2. Click the microphone icon (if available)
 3. Speak: "What lights are on?"
 
 {: .note }
 > **Verify your pipeline works** by testing these commands:
-> 
+>
 > 1. **"What lights are on?"** - Should list active lights
 > 2. **"Turn on the living room lights"** - Should confirm the action
 > 3. **"What time is it?"** - Should report current time
-> 
+>
 > If commands don't work, check your Wyoming integration logs in **Settings > System > Logs**.
 
 ## Troubleshooting Quick Checks

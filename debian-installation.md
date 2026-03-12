@@ -235,12 +235,14 @@ curl http://localhost:8000/health
 ### Common Issues
 
 **Permission denied errors:**
+
 ```bash
 # Ensure you own the virtual environment directory
 chown -R $USER:$USER ~/lemonade-env
 ```
 
 **Port already in use:**
+
 ```bash
 # Find what's using port 8000
 sudo lsof -i :8000
@@ -250,6 +252,7 @@ sudo kill -9 <PID>
 ```
 
 **Python version too old:**
+
 ```bash
 # Check Python version
 python3 --version

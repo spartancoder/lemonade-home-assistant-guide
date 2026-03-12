@@ -68,6 +68,7 @@ embedding:
 ```
 
 **Device options:**
+
 - `cuda`: NVIDIA GPU acceleration (recommended if available)
 - `npu`: AMD Ryzen AI NPU acceleration
 - `cpu`: CPU-only (slower but works everywhere)
@@ -90,6 +91,7 @@ sudo systemctl status lemonade-server
 
 {: .note }
 > ✅ **Verify embedding works** by generating a vector:
+>
 > ```bash
 > curl -X POST http://localhost:8080/v1/embeddings \
 >   -H "Content-Type: application/json" \
@@ -100,8 +102,9 @@ sudo systemctl status lemonade-server
 > ```
 >
 > Expected response: JSON with a 768-dimensional vector in `data[0].embedding`
-> 
+>
 > Example response structure:
+>
 > ```json
 > {
 >   "object": "list",

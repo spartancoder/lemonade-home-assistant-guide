@@ -9,7 +9,8 @@ Configuration files and scripts are distributed via GitHub Releases to avoid the
 **Status:** Release v1.0.0 is active and ready for file uploads in Phase 3.
 
 **Download Pattern:**
-```
+
+```text
 https://github.com/spartancoder/lemonade-home-assistant-guide/releases/download/v1.0.0/{filename}
 ```
 

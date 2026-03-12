@@ -85,7 +85,7 @@ Multi-turn conversations with context awareness:
 
 ### Device Control
 
-```
+```conversation
 User: "Turn on the living room lights"
 Assistant: "Turning on the living room lights now."
 
@@ -98,7 +98,7 @@ Assistant: "The living room and bedroom lights are currently on."
 
 ### Information Query
 
-```
+```conversation
 User: "What's the temperature inside?"
 Assistant: "The current indoor temperature is 72 degrees Fahrenheit."
 
@@ -111,7 +111,7 @@ Assistant: "The outdoor temperature is 68 degrees Fahrenheit."
 
 ### Complex Commands
 
-```
+```conversation
 User: "Set the thermostat to 70 degrees and turn off the kitchen lights."
 Assistant: "I've set the thermostat to 70 degrees and turned off the kitchen lights."
 
@@ -121,7 +121,7 @@ Assistant: "Good night! I've turned off all the lights and locked the doors."
 
 ### Contextual Follow-ups
 
-```
+```conversation
 User: "Turn on the lights"
 Assistant: "Which lights would you like me to turn on?"
 

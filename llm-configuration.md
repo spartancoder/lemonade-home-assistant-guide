@@ -106,6 +106,7 @@ sudo systemctl status lemonade-server
 
 {: .note }
 > ✅ **Test GPU LLM** with a simple prompt:
+>
 > ```bash
 > curl -X POST http://localhost:8080/v1/chat/completions \
 >   -H "Content-Type: application/json" \
@@ -233,6 +234,7 @@ sudo systemctl status lemonade-server
 
 {: .note }
 > ✅ **Test NPU LLM** with a simple prompt:
+>
 > ```bash
 > curl -X POST http://localhost:8080/v1/chat/completions \
 >   -H "Content-Type: application/json" \
@@ -260,6 +262,7 @@ Common issues and solutions:
 
 {: .note }
 > **GPU vs NPU Decision Guide:**
+>
 > - **Choose GPU** if you have an NVIDIA GPU - best compatibility and wider model support
 > - **Choose NPU** if you have AMD Ryzen AI - more power-efficient for always-on voice assistant
 > - **Both work** with the same models - the choice is purely about hardware optimization

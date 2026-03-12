@@ -117,6 +117,7 @@ Look for log messages confirming Kokoro model loaded successfully.
 
 {: .note }
 > ✅ **Verify your setup works** by testing the TTS endpoint:
+>
 > ```bash
 > # Generate speech from text
 > curl -X POST http://localhost:8080/v1/audio/speech \

@@ -32,7 +32,7 @@ For complete model specifications and download options, see the [References](/re
 
 Your voice assistant's STT pipeline works like this:
 
-```
+```text
 Voice Input → Lemonade Server (Whisper) → Text Output → Home Assistant
 ```
 

@@ -37,7 +37,7 @@ Setting up a local voice assistant offers several compelling benefits:
 
 The Lemonade Home Assistant system consists of several interconnected components:
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                    HOME ASSISTANT                                │
 │   (Voice Pipeline, Wyoming Integration, Automations)             │

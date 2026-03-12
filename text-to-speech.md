@@ -39,7 +39,7 @@ See [References](/references#models) for full model details and download links.
 
 Your TTS system has three main components:
 
-```
+```text
 Text Input → Lemonade Server (Kokoro) → Audio Output → Home Assistant → Speaker
 ```
 

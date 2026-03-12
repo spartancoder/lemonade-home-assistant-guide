@@ -90,6 +90,7 @@ journalctl -u lemonade-server -f
 
 {: .note }
 > ✅ **Verify your setup works** by testing the STT endpoint:
+>
 > ```bash
 > # Check STT is enabled
 > curl http://localhost:8080/v1/audio/transcriptions

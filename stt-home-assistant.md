@@ -24,7 +24,7 @@ Before connecting Home Assistant, ensure you have:
 
 **Wyoming** is an open protocol for connecting voice assistant components. It enables Home Assistant to communicate with external speech-to-text and text-to-speech services.
 
-```
+```text
 Home Assistant ←→ Wyoming Protocol (Port 10200) ←→ Lemonade Server (Whisper)
 ```
 
@@ -92,7 +92,7 @@ ha core restart
 
 {: .note }
 > ✅ **Test voice input** in Home Assistant:
-> 
+>
 > 1. Go to **Settings → Voice assistants**
 > 2. Create a new voice assistant or edit an existing one
 > 3. Set **Speech-to-Text** to your Wyoming integration

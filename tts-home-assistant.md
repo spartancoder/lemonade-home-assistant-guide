@@ -41,7 +41,7 @@ The Wyoming integration handles both STT and TTS. If you already added it for sp
 | Host | IP address of Lemonade Server (e.g., `192.168.1.100`) |
 | Port | `10200` |
 
-5. Click **Submit** to add the integration
+1. Click **Submit** to add the integration
 
 ## 2. Configure TTS in Home Assistant
 
@@ -107,7 +107,7 @@ The voices available depend on your Kokoro installation. Common options:
 
 {: .note }
 > ✅ **Test voice output** in Home Assistant:
-> 
+>
 > 1. Go to **Settings > Voice assistants**
 > 2. Select your voice assistant
 > 3. Click **Test**
@@ -136,15 +136,18 @@ Replace `media_player.your_speaker` with your actual media player entity.
 ## Troubleshooting
 
 **No audio output:**
+
 - Verify your media player is connected and working
 - Check that the Wyoming integration shows as connected in Settings
 - Ensure the TTS platform is configured in configuration.yaml
 
 **Wrong voice:**
+
 - Verify the voice ID in your configuration matches an available voice
 - Check that the voice name is spelled correctly (case-sensitive)
 
 **Connection errors:**
+
 - Confirm Lemonade Server is running and accessible
 - Verify the IP address and port are correct
 - Check firewall rules allow traffic on port 10200
