@@ -1,8 +1,8 @@
 # Site information
 title: "Lemonade Home Assistant Guide"
 description: "Complete guide to setting up a local voice assistant with Lemonade Server"
-baseurl: ""  # Empty for root deployment, adjust if using subdirectory
-url: ""  # Will be populated by GitHub Pages, leave empty for now
+baseurl: "" # Empty for root deployment, adjust if using subdirectory
+url: "" # Will be populated by GitHub Pages, leave empty for now
 
 # Theme (gem-based for GitHub Actions workflow)
 theme: just-the-docs
@@ -10,8 +10,8 @@ theme: just-the-docs
 # Theme features
 search_enabled: true
 search:
-  heading_level: 2  # Split pages into H2 sections
-  previews: 3  # Max 3 previews per result
+  heading_level: 2 # Split pages into H2 sections
+  previews: 3 # Max 3 previews per result
 
 # Color scheme
 # Default is "light". Auto dark mode switching is handled by custom JavaScript
@@ -27,6 +27,8 @@ heading_anchors: true
 # Enable copy button for code blocks (just-the-docs v0.4+)
 enable_copy_code_button: true
 
+mermaid:
+  version: "9.1.6"
 # Aux links (optional - add social links later if needed)
 aux_links:
   "View on GitHub":

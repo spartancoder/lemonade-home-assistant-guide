@@ -12,7 +12,7 @@ Welcome to the Lemonade Home Assistant Guide. This guide will help you set up a 
 
 ## What is Lemonade Server?
 
-Lemonade Server is a local AI server that provides speech-to-text (STT), text-to-speech (TTS), and large language model (LLM) capabilities—all running entirely on your own hardware. Unlike cloud-based voice assistants, Lemonade Server processes everything locally, ensuring your voice data never leaves your machine.
+Lemonade Server is a local AI server that brings together speech-to-text (STT), text-to-speech (TTS), and large language model (LLM) capabilities—all within a single easy to use application that can run on hardware you own. Unlike cloud-based voice assistants, Lemonade Server processes everything locally, ensuring your voice data never leaves your machine.
 
 **Key capabilities:**
 
@@ -22,7 +22,7 @@ Lemonade Server is a local AI server that provides speech-to-text (STT), text-to
 - **AMD NPU Acceleration**: Leverage Ryzen AI for faster inference
 
 {: .note }
-> This guide focuses on Debian Linux. Windows users should use WSL (Windows Subsystem for Linux) to follow along.
+> This guide focuses on Ubuntu 24.04. Many of the steps however are directly transferable to Windows.
 
 ## Why Local Voice Assistant?
 
@@ -31,21 +31,21 @@ Setting up a local voice assistant offers several compelling benefits:
 - **Privacy**: Your voice data never leaves your local network. All processing happens on your hardware, with no data sent to cloud services.
 - **Control**: You choose your AI models and customize their behavior. Switch between different models, adjust parameters, and tune responses to your needs.
 - **No Subscription**: Run entirely offline after the initial model download. No monthly fees, no API limits, no service interruptions.
-- **Hardware Acceleration**: Use your AMD NPU (Ryzen AI) for faster, more efficient inference. Get cloud-quality performance without the cloud.
+- **Works Offline**: We live in interesting times. As a result, services are interupted by natural or manmade disaster, service discontinuations, and many other unpredictable calamities. Running this locally on your own hardware lets you sail by without interuption, without having to purchase a new and likely more expensive version of something you already have.
 
 ## Architecture Overview
 
-The Lemonade Home Assistant system consists of several interconnected components:
+Home Assistant and Lemonade Server will interact through Home Assistant Custom Components and Lemonade Servers OpenAI Comptable API's.
 
 ```text
 ┌─────────────────────────────────────────────────────────────────┐
-│                    HOME ASSISTANT                                │
-│   (Voice Pipeline, Wyoming Integration, Automations)             │
+│                    HOME ASSISTANT                               │
+│             (Voice Pipeline, Automations)                       │
 └────────────────────────────┬────────────────────────────────────┘
-                             │ Wyoming Protocol
+                             │ 
                              ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                    LEMONADE SERVER                               │
+│                    LEMONADE SERVER                    │
 │   (Local AI Server - STT, TTS, LLM)                              │
 │                                                                  │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐           │
