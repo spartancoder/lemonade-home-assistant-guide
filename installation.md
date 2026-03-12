@@ -13,10 +13,9 @@ Get Lemonade Server running on your system. This section covers installation for
 
 ## Choose Your Platform
 
-| Platform | Status | Recommended For |
-|----------|--------|-----------------|
+| Platform        | Status       | Recommended For                      |
+| --------------- | ------------ | ------------------------------------ |
 | [Linux](/linux) | ✅ Supported | Production use, servers, development |
-| [Windows](/windows-installation) | 🚧 Coming Soon | Desktop use (use WSL alternative) |
 
 ## Prerequisites Check
 
@@ -27,6 +26,7 @@ Before installing, ensure you have:
 - **Python**: Python 3.10 or higher
 
 {: .note }
+
 > See [Prerequisites](/prerequisites) for complete hardware and software requirements.
 
 ## What You'll Install
@@ -35,14 +35,14 @@ Lemonade Server includes:
 
 - **Core Server** - HTTP API for model inference
 - **Model Support** - STT, LLM, TTS, and embedding models
-- **Home Assistant Integration** - Wyoming protocol support for voice assistant
+- **Home Assistant Integration** - Custom Components to integrate with Lemonade Server
 - **Systemd Service** - Auto-start on boot (Linux)
 
 ## Next Steps
 
 1. **Linux Users**: Go to [Linux](/linux) and select your distribution
-2. **Windows Users**: See [Windows Installation](/windows-installation) for WSL alternative
+ alternative
 
 ---
 
-*Installation typically takes 10-15 minutes depending on your internet connection.*
+_Installation typically takes 10-15 minutes depending on your internet connection._

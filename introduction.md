@@ -36,6 +36,14 @@ Setting up a local voice assistant offers several compelling benefits:
 ## Architecture Overview
 
 Home Assistant and Lemonade Server will interact through Home Assistant Custom Components and Lemonade Servers OpenAI Comptable API's.
+```mermaid
+graph LR
+	VA[Voice Assistant] --> HA[Home Assistant]
+	HA[Home Assistant] --> TTS[Lemonade Server - TTS]
+	HA[Home Assistant] --> SST[Lemonade Server - SST]
+	HA[Home Assistant] --> LLM[Lemonade Server - LLM]
+```
+
 
 ```text
 ┌─────────────────────────────────────────────────────────────────┐
@@ -45,15 +53,15 @@ Home Assistant and Lemonade Server will interact through Home Assistant Custom C
                              │ 
                              ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                    LEMONADE SERVER                    │
-│   (Local AI Server - STT, TTS, LLM)                              │
-│                                                                  │
+│                    LEMONADE SERVER                              │
+│            (Local AI Server - STT, TTS, LLM)                    │
+│                                                                 │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐           │
 │  │   Whisper    │  │    Kokoro    │  │   LLM        │           │
-│  │   (STT)      │  │    (TTS)     │  │ (Qwen/GPT)   │           │
+│  │   (STT)      │  │    (TTS)     │  │(Qwen/GPT-OSS)│           │
 │  └──────────────┘  └──────────────┘  └──────────────┘           │
-│                                                                  │
-│  Hardware: CPU / GPU / AMD NPU (Ryzen AI)                       │
+│                                                                 │
+│          Hardware: CPU / GPU / AMD NPU (Ryzen AI)               │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -88,10 +96,10 @@ Here's a quick summary of what you'll need:
 This guide is organized into the following sections:
 
 1. **[Prerequisites](/prerequisites)** - Verify your hardware and software meet requirements before starting
-2. **[Installation](/installation)** - Install Lemonade Server on Debian Linux
+2. **[Installation](/installation)** - Install Lemonade Server on Linux
 3. **[Speech-to-Text](/speech-to-text)** - Configure Whisper for voice recognition
 4. **[Text-to-Speech](/text-to-speech)** - Set up Kokoro for natural speech output
-5. **[Conversational Setup](/conversational-setup)** - Configure the LLM and embedding model for conversations
+5. **[Conversational Setup](/conversational-setup)** - Configure the LLM
 6. **[Usage Examples](/usage-examples)** - Test your voice assistant with practical commands
 7. **[References](/references)** - External resources and documentation links
 

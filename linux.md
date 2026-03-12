@@ -16,8 +16,7 @@ Linux is the recommended platform for Lemonade Server. This page helps you choos
 
 | Distribution | Package Manager | Guide |
 |--------------|-----------------|-------|
-| Debian 12+ | apt | [Debian Based](/debian-installation) |
-| Ubuntu 22.04+ | apt | [Debian Based](/debian-installation) |
+| Ubuntu 24.04+ | apt | [Debian Based](/debian-installation) |
 | Fedora 38+ | dnf | [RHEL Based](/rhel-installation) |
 | RHEL 9+ | dnf/yum | [RHEL Based](/rhel-installation) |
 | CentOS Stream 9+ | dnf/yum | [RHEL Based](/rhel-installation) |

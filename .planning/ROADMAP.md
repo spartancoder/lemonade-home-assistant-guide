@@ -79,10 +79,11 @@ Plans:
   1. All code examples tested and verified working
   2. All internal and external links verified
   3. Site accessible and functional on GitHub Pages
-**Plans**: TBD
+**Plans**: 2 plans in 2 waves
 
 Plans:
-- [ ] 04-01: [To be planned]
+- [ ] 04-01: Code & Link Quality Verification (POLISH-01, POLISH-02)
+- [ ] 04-02: Build & Deployment Verification (POLISH-03)
 
 ## Progress
 
@@ -94,4 +95,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Site Infrastructure | 4/4 | Complete | 2026-03-04 |
 | 2. Content Architecture | 4/4 | Complete | 2026-03-09 |
 | 3. Tutorial Documentation | 0/6 | Planned | - |
-| 4. Final Polish | 0/TBD | Not started | - |
+| 4. Final Polish | 0/2 | Planned | - |
