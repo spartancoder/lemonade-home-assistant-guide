@@ -15,65 +15,48 @@ Before installing Lemonade Server, ensure your system meets the following requir
 
 Your hardware determines how well the AI models perform. While you can run everything on a modern CPU, having a GPU or NPU significantly improves response times.
 
-| Component | Minimum | Recommended | Notes |
-|-----------|---------|-------------|-------|
-| CPU | 4 cores | 8+ cores | More cores = faster parallel processing |
-| RAM | 16 GB | 32 GB | AI models require significant memory |
-| GPU | Optional | NVIDIA RTX 3060+ (12GB VRAM) | CUDA acceleration for GPU inference |
-| NPU | AMD Ryzen AI | AMD Ryzen AI 300 series | NPU acceleration (AMD only, no NVIDIA alternative) |
-| Storage | 50 GB free | 100 GB free | Models range from 2-20 GB each |
-| Microphone | Any USB mic | Quality USB mic | Better audio input improves STT accuracy |
-| Speaker | Any speaker | Quality speakers/headphones | For TTS audio output |
+All testing was completed with the following hardware:
+
+1. [AMD Ryzen AI Max+ 395 (Strix Halo) - 128GB Memory - Minisform MS-S1 Max](https://www.minisforum.com/products/ms-s1-max)
+2. [FutureProofHomes Sattellite1 Dev Kit](https://futureproofhomes.net/products/satellite1-pcb-dev-kit)
+3. [AMD Ryzen AI 9 HX 370 (Strix Point) - 96GB Memory - Minisform N5-Pro](https://www.minisforum.com/products/n5-pro)
+
+| Component                | Minimum       | Recommended                                                                                          | Notes                                              |
+| ------------------------ | ------------- | ---------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| CPU                      | 4 cores       | 8+ cores                                                                                             | More cores = faster parallel processing            |
+| RAM                      | 16 GB         | 32 GB                                                                                                | AI models require significant memory               |
+| GPU                      | Optional      | AMD or Nvidia Card with at least 12GB of VRAM                                                        | GPU Acceleration                                   |
+| NPU                      | AMD Ryzen AI  | AMD Ryzen AI 300 series                                                                              | NPU acceleration (AMD only, no NVIDIA alternative) |
+| Storage                  | 50 GB free    | 100 GB free                                                                                          | Models range from 2-120 GB each                    |
+| Voice Assistant Hardware | Mic + Speaker | [FutureProofHomes Sattellite1 Dev Kit](https://futureproofhomes.net/products/satellite1-pcb-dev-kit) | Some device with a mic and speaker are required    |
 
 ### What and Why
 
 - **CPU**: Handles model inference when GPU/NPU isn't available. More cores help with parallel processing.
 - **RAM**: Models are loaded into memory during inference. Insufficient RAM causes swapping and slow performance.
-- **GPU**: NVIDIA GPUs with CUDA support dramatically speed up inference. A mid-range RTX card (3060 or better) provides excellent performance.
+- **GPU**: A GPU will significally increase performance when using it for running the llm that will be used for intent detection.
 - **NPU**: AMD's Ryzen AI NPU provides efficient acceleration for supported models. Works with Lemonade's NPU backend.
-- **Storage**: You'll download multiple AI models (STT, TTS, LLM, embedding). SSD recommended for faster model loading.
-- **Microphone**: Clear audio input is essential for accurate speech recognition. Avoid cheap built-in laptop microphones if possible.
+- **Voice Assistant Hardware**: This is you interact with and control your smarthome.
 
 ## Software Dependencies
 
 Ensure you have the following software installed before starting:
 
-| Software | Version | Why Needed |
-|----------|---------|------------|
-| Operating System | Debian 12 (Bookworm) or Ubuntu 22.04+ | Tested and documented platform |
-| Python | 3.10+ | Lemonade Server runtime |
-| Home Assistant | 2024.12+ | Required for Wyoming protocol support |
-| Git | Latest | Cloning repositories |
-| curl | Latest | Downloading files and models |
-| build-essential | Latest | Compiling some Python packages |
-
-### Installation Commands
-
-```bash
-# Update package lists
-sudo apt update
-
-# Install Python, pip, and build tools
-sudo apt install python3 python3-pip python3-venv build-essential -y
-
-# Install Git and curl
-sudo apt install git curl -y
-
-# Verify Python version (should be 3.10+)
-python3 --version
-```
+| Software         | Version       | Why Needed                     |
+| ---------------- | ------------- | ------------------------------ |
+| Operating System | Ubuntu 24.04+ | Tested and documented platform |
 
 {: .note }
-> This guide uses Debian Linux. If you're on Ubuntu 22.04+, the commands are the same. For other distributions, adapt the package manager commands accordingly.
+
+> This guide uses Ubuntu 24.04. Lemonade also runs on other Linux distros as well as windows. Configuraiton steps outside of installation should be similar.
 
 ## Network Requirements
 
 Your network setup affects how Home Assistant communicates with Lemonade Server:
 
-- **Local Network Access**: Both Home Assistant and Lemonade Server must be on the same LAN
+- **Local Network Access**: Both Home Assistant and Lemonade Server should be local to each other. Being on the same subnet is not required, but but home assistant must be able to reach the lemonade server.
 - **Static IP Recommended**: Assign a static IP to your Lemonade Server machine to avoid connection issues after reboots
-- **Home Assistant Accessible**: Ensure you can access Home Assistant from the machine running Lemonade Server
-- **Internet for Initial Setup**: Required for downloading models (5-20 GB total); after setup, everything runs offline
+- **Internet for Initial Setup**: Required for downloading models (5-120 GB total); after setup, everything runs offline
 
 ### Network Configuration Tips
 
@@ -105,7 +88,7 @@ cd /path/to/directory
 ls -la
 
 # Edit a file with nano
-nano filename.txt
+vim filename.txt
 
 # Run a command as superuser
 sudo command
@@ -114,7 +97,6 @@ sudo command
 cat filename.txt
 ```
 
-**New to Linux?** We recommend the [Linux Journey](https://linuxjourney.com/) tutorial for a gentle introduction to command-line basics.
 
 ## Home Assistant Basics
 
@@ -131,20 +113,22 @@ This guide assumes you have Home Assistant installed and running. You should be 
 
 Plan for approximately 2-4 hours to complete the full setup. Here's a breakdown by section:
 
-| Section | Estimated Time | Notes |
-|---------|----------------|-------|
-| Installation | 30-60 minutes | Downloading and installing Lemonade Server |
-| STT Setup | 30 minutes | Configuring Whisper for speech recognition |
-| TTS Setup | 30 minutes | Configuring Kokoro for speech synthesis |
-| LLM Setup | 30-60 minutes | Configuring the language model (varies by hardware) |
-| Home Assistant Integration | 30 minutes | Setting up Wyoming integration and voice pipeline |
+| Section                    | Estimated Time | Notes                                               |
+| -------------------------- | -------------- | --------------------------------------------------- |
+| Installation               | 30-60 minutes  | Downloading and installing Lemonade Server          |
+| STT Setup                  | 30 minutes     | Configuring Whisper for speech recognition          |
+| TTS Setup                  | 30 minutes     | Configuring Kokoro for speech synthesis             |
+| LLM Setup                  | 30-60 minutes  | Configuring the language model (varies by hardware) |
+| Home Assistant Integration | 30 minutes     | Setting up Wyoming integration and voice pipeline   |
 
 **Factors that affect time:**
+
 - Internet speed (for model downloads)
 - Hardware capabilities (CPU vs GPU vs NPU)
 - Familiarity with Linux and Home Assistant
 
 {: .note }
+
 > ✅ **Before proceeding**, ensure your system meets the minimum requirements listed above. Having the right hardware and software will make the setup process much smoother.
 
 ---

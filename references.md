@@ -12,8 +12,8 @@ External resources for Lemonade Server, Home Assistant, and AI models.
 
 ## Lemonade Server
 
-- [Lemonade Server GitHub](https://github.com/lemonade-sdk/lemonade-server) - Official repository
-- [Lemonade Documentation](https://lemonade-sdk.github.io/lemonade-server/) - Official documentation
+- [Lemonade Server GitHub](https://github.com/lemonade-sdk/lemonade) - Official repository
+- [Lemonade Documentation](https://lemonade-server.ai/) - Official documentation
 
 ## Home Assistant
 
